@@ -1,0 +1,177 @@
+@import '../variables';
+.grid-filters-block {
+    padding: 29px 21px 15px 11px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 88px;
+    .right-action{
+        margin-left: 15px;
+    }
+
+
+}
+.grid-filters-block .filter-block .m-element{
+    .table-icon{
+        .input-group-text{
+            border: none;
+            padding: 0;
+        }
+        position: absolute;
+        z-index: 5;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 20px;
+    }
+    .table-search{
+        padding-left: 56px;
+        background: none;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+        border: none;
+        width: 250px;
+        height: 48px;
+        border-radius: 12px;
+        // background: rgba(244, 244, 244, 1);
+
+    }
+
+    .table-datepicker{
+        width: 250px;
+        border: none;
+        height: 48px;
+        .mx-input{
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 24px;
+            border: none;
+            box-shadow: none;
+            text-align: left;
+            padding-right: 40px;
+            border-radius: 12px;
+        }
+        .mx-input-wrapper, .mx-input{
+            height: 100%;
+            .mx-icon-calendar{
+                right: 10%;
+
+            }
+            .mx-input{
+                padding: 10px 10px 10px 60px
+            }
+            &:hover{
+                .mx-icon-calendar{
+                    display: block;
+                }
+            }
+        }
+    }
+}
+.right-action-wrapper{
+    display: flex;
+    .for-icon{
+        .icon-holder{
+            position: absolute;
+            right: 16px;
+            top: 1px;
+            bottom: 1px;
+            width: 30px;
+            padding-right: 0;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+            border-radius: 12px;
+            pointer-events: none;
+        }
+    }
+}
+
+.grid-filters-block .filter-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .m-element{
+        width: auto;
+    }
+}
+.grid-filters-block .right-action{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grid-filters-block input[type=search]{
+    border-right: 0px
+}
+
+.grid-filters-block .input-group-append .input-group-text {
+    background-color: transparent;
+    color: #e0e4ea;
+    border-left: 0px;
+}
+
+.card, .right-action-wrapper, .table-status{
+    .table-control, .table-control-status{
+        display: inline-block;
+        background: none;
+        padding: 0;
+        height: 48px;
+        width: auto;
+        padding: 0 20px;
+        border-radius: 12px;
+
+    }
+    // .table-control-first{
+    //     margin-right: 25px;
+    // }
+
+}
+.table-status{
+    text-align: end;
+    .table-control-status{
+        width: auto;
+    }
+}
+
+.grid-filters-block{
+    .filter-block{
+        width: 100%;
+        .m-element{
+            &:first-child{
+                width: 70%;
+                .input-group{
+                    width: 80%;
+                }
+                & ~ .m-element{
+                    width: auto;
+                    margin: 0 10px;
+                }
+            }
+        }
+
+    }
+}
+.content-table{
+    .table-container{
+        .grid-filters-block {
+            .filter-block {
+                .w-25 .m-element{
+                    width: auto !important;
+                }
+                .m-element:first-child{
+                    width: 100%;
+                    .input-group{
+                        width: 65%;
+                    }
+                    & ~ .m-element{
+                        width: auto;
+                        margin: 0 10px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,242 @@
+@import '../variables';
+
+@mixin base-style {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    color: $default-color
+}
+.assign-header{
+    @include base-style()
+}
+
+
+
+#app{
+    main{
+        content{
+            position: relative;
+        }
+    }
+    .card{
+        .card-body{
+            .assign-btn, .assign-btn-user{
+                min-width: 130px;
+            }
+            .assign-btn-user{
+                margin-top: 37px;
+            }
+        }
+    }
+    a.assign-btn{
+        border: none;
+        @include base-style();
+        color: $back-button-color;
+        background: none;
+        box-shadow: none;
+        padding: 0;
+        position: absolute;
+        top: 37px;
+    }
+    .assign-card{
+        padding: 40px 42px 64px 42px;
+        border-radius: 20px;
+        .card-body{
+            .assign-form-btn{
+                margin-top: 37px !important;
+            }
+        }
+    }
+    .assign-body{
+        padding: 0 17px 20px 11px;
+        border-radius: 20px;
+        .card-body{
+            padding: 0 20px;
+            .table-draggable{
+                display: none;
+            }
+            .grid-filters-block{
+                padding-left: 12px;
+            }
+
+        }
+
+    }
+    .assign-header-for{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: $default-color;
+        margin-bottom: 32px;
+    }
+    button.assign-form-btn{
+        min-width: 130px;
+        height: 46px;
+        border-radius: 12px;
+        box-shadow: none;
+        background: $active-color;
+        color: $default-color;
+    }
+
+    .assign-secondary{
+        padding-bottom: 108px;
+        .card-body{
+            padding: 0 19px;
+
+        }
+        .custom-grid-table{
+            width: 200%;
+        }
+        .table-pagination{
+            position: absolute;
+            right: 42px;
+            bottom: 42px;
+        }
+        .table-overflow{
+            overflow: auto;
+        }
+    }
+    .invoice-card, .shiping-card{
+        padding-top: 0;
+        .grid-filters-block{
+            .filter-block{
+                width: 100%;
+                // .table-status{
+                //     margin-left: 139px;
+                // }
+                .w-25, .m-element{
+                    &:first-child{
+                        width: 50%;
+                        .input-group{
+                            width: 80%;
+                        }
+                        & ~ .m-element{
+                            width: auto;
+                            margin: 0 10px;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+.assign-label{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $menu-icon-color;
+}
+.myorders-card{
+    padding-top: 0;
+}
+.payment-card{
+    max-width: 370px;
+    width: 100%;
+    min-height: 319px;
+    padding: 32px 16px;
+    .payment-header{
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        .payment-title{
+            @include base-style()
+        }
+        .payment-subtitle{
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 24px;
+            color: $menu-icon-color;
+            margin: 47px 0 0 0;
+        }
+    }
+    .payment-icon{
+        margin-top: 32px;
+        height: 74px;
+        img {
+            max-height: 74px;
+        }
+    }
+}
+
+.swal2-popup, .swal2-modal, .swal2-show{
+    max-width: 400px;
+    width: 100%;
+    height: 224px;
+    padding: 32px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    .swal2-content{
+        text-align: left;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        color: #878787;
+        margin-top: 32px;
+
+    }
+    .swal2-header{
+        display: block;
+        .swal2-title{
+            text-align: left;
+            margin: 0;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            color: $default-color;
+        }
+    }
+    .swal2-actions{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        .swal2-confirm, .swal2-cancel{
+            width: 130px;
+            height: 46px;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+            color: $default-color;
+            background-color: $active-color;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .swal2-cancel{
+            background: none;
+            border: 1px solid $active-color;
+        }
+
+    }
+}
+
+.form-group{
+    .is-invalid{
+        background-color: rgba(255, 243, 243, 1);
+    }
+    .invalid-feedback{
+        ul{
+            list-style-type: none;
+        }
+    }
+}
+.invoice-card{
+    padding-top: 0;
+    .card-body{
+        .right-action{
+            margin-left: 15px;
+            .table-control, .table-control-first{
+                margin-right: 0;
+            }
+        }
+    }
+
+
+}
+
+

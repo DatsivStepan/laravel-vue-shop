@@ -1,0 +1,114 @@
+@import '../variables';
+
+.content-header, .category-breadcrumb, .product-info{
+    .product-button, .product-button-active{
+        height: 46px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+        color: $default-color;
+        background-color: $active-color;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 130px;
+    }
+    .product-button{
+        background: none;
+        border: 1px solid $active-color;
+    }
+    .back-button{
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 36px;
+        color: #C4C4C4;
+        margin-bottom: 32px;
+        display: inline-flex;
+        padding-left: 0;
+
+    }
+    .content-align{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+
+#app button.btn-primary{
+    background-color: $active-color;
+    border-radius: 12px;
+    color: $default-color;
+    box-shadow: none;
+    height: 46px;
+    font-size: 12px;
+    padding: 0;
+    span{
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+        color: $default-color;
+        }
+
+}
+.apply-coupon{
+    .btn-apply{
+        min-width: 122px;
+    }
+}
+
+#app{
+    .form{
+        .btn-save{
+            min-width: 130px;
+        }
+    }
+    .product-info{
+        .to-cart-buttons-block{
+            button .btn-block{
+                min-width: 146px;
+            }
+
+        }
+    }
+
+}
+
+#app {
+    .list-view{
+        .buttons-width{
+            width: 28.5% !important;
+        }
+    }
+
+}
+
+.grid-view, .list-view, .panel-right{
+    .custom-row-btn{
+        .custom-col-btn{
+            flex: 0 0 47.5%;
+        }
+    }
+    .buttons-width{
+        .detalis-col{
+            flex: 0 0 47.5%;
+            .product-button-active{
+                min-width: 122px;
+            }
+        }
+    }
+
+}
+.product-info{
+    .full-width{
+        .to-cart-buttons-block{
+            button{
+                flex: 0 0 47.5%;
+            }
+        }
+    }
+}
+#app .product-info .full-width.to-cart-buttons-block .custom-col-btn{
+    flex: 0 0 47.5%;
+}

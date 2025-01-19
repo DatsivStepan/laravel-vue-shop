@@ -1,0 +1,139 @@
+@import '../variables';
+
+@mixin setting-prop {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: $default-color;
+}
+#app{
+    main{
+        content{
+            padding-bottom: 40px
+        }
+    }
+
+};
+.setting{
+    &-panel{
+        padding: 40px 42px;
+    }
+    &-form{
+        height: 75px;
+        border-top: 1px solid $form-control-color;
+        margin: 0 auto 27px auto;
+        padding-top: 27px;
+        height: auto;
+    };
+    &-label{
+        padding: 0;
+    }
+    &-item{
+        @include setting-prop()
+    };
+
+    &-descr{
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 20px;
+        color: $menu-icon-color;
+        margin-top: 4px;
+    };
+    &-header{
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        color: $default-color;
+        margin-bottom: 51px;
+    };
+    &-input{
+        width: 18px;
+        height: 18px;
+        margin-right: 26px;
+        visibility: hidden;
+    }
+    &-span{
+        @include setting-prop()
+    }
+    &-item{
+        display: flex;
+        align-items: center;
+        height: 18px;
+    };
+    &-input {
+        position: absolute;
+        opacity: 0;
+      }
+    &-input + label {
+        position: relative;
+        cursor: pointer;
+        padding: 0;
+        margin: 0;
+      }
+    &-input + label:before {
+        content: "";
+        margin-right: 26px;
+        display: inline-block;
+        vertical-align: text-top;
+        width: 18px;
+        height: 18px;
+        background: white;
+        border: 1px solid $menu-icon-color;
+        border-radius: 3px;
+      }
+    &-input:checked + label:before {
+        background: $active-color;
+        border-radius: 3px;
+        border: none;
+      }
+    &-input:disabled + label {
+        color: #b8b8b8;
+        cursor: auto;
+      }
+    &-input:disabled + label:before {
+        box-shadow: none;
+        background: #ddd;
+
+      }
+    &-input:checked + label:after {
+        content: "";
+        position: absolute;
+        left: 4px;
+        top: 10px;
+        background: $default-color;
+        width: 2px;
+        height: 2px;
+        box-shadow: 2px 0 0 $default-color, 4px 0 0 $default-color, 4px -2px 0 $default-color, 4px -4px 0 $default-color, 4px -6px 0 $default-color, 4px -8px 0 $default-color;
+        transform: rotate(45deg);
+    }
+
+    .type-number{
+        border: 1px solid $form-control-color;
+        margin-right: 5px;
+    }
+    &-btn{
+        min-width: 159px;
+    }
+    input[type=number]{
+        width: 6rem;
+    }
+    .btn-save{
+        width: 130px;
+    }
+}
+.setting-dropdown{
+    width: auto;
+    border: 1px solid $form-control-color;
+    margin-top: -5px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 24px;
+    margin-right: 10px;
+}
+.setting-duration{
+    display: flex;
+    input{
+        border: 1px solid $form-control-color;
+    }
+}
+

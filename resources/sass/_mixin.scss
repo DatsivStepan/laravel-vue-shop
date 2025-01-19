@@ -1,0 +1,158 @@
+@mixin optional-at-root($sel) {
+    @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+      @content;
+    }
+  }
+
+  @mixin placeholder {
+    @include optional-at-root('::-webkit-input-placeholder') {
+      @content;
+    }
+
+    @include optional-at-root(':-moz-placeholder') {
+      @content;
+    }
+
+    @include optional-at-root('::-moz-placeholder') {
+      @content;
+    }
+
+    @include optional-at-root(':-ms-input-placeholder') {
+      @content;
+    }
+  }
+
+$screen-sm-max: 575.98px;
+
+$screen-md-max: 767.98px;
+
+$screen-lg-max: 991.98px;
+
+$screen-x-max: 1199.98px;
+
+$screen-xl-max: 1366.98px;
+
+$screen-xxl-max: 1800px;
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+$screen-xs-min: 320px;
+
+
+
+
+
+@mixin xs {
+  @media (min-width: #{$screen-xs-min}) {
+    @content;
+  }
+}
+
+// Small devices
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+      @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+      @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+      @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+      @content;
+  }
+}
+
+@mixin xxl {
+  @media (max-width: #{$screen-xxl-max}) {
+      @content;
+  }
+}
+
+
+
+
+//
+@mixin sm-max {
+  @media (max-width: #{$screen-sm-max}) {
+      @content;
+  }
+}
+
+@mixin md-max {
+  @media (max-width: #{$screen-md-max}) {
+      @content;
+  }
+}
+
+@mixin lg-max {
+  @media (max-width: #{$screen-lg-max}) {
+      @content;
+  }
+}
+
+@mixin x-max {
+    @media (max-width: #{$screen-x-max}) {
+        @content;
+    }
+}
+
+@mixin xl-max {
+    @media (max-width: #{$screen-xl-max}) {
+        @content;
+    }
+}
+@mixin fluid($minf,$maxf, $minb, $maxb){
+    $maxlessone: $maxb - 1;
+    $avg: ($maxf + $minf) / 2;
+    font-size: #{$minf}px;
+    @media (min-width: #{$minb}px) and (max-width: #{$maxlessone}px){
+      font-size: #{$avg}px;
+      font-size: calc(#{$minf}px + (#{$maxf} - #{$minf}) * (100vw - #{$minb}px) / (#{$maxb} - #{$minb}));
+    }
+
+    @media (min-width: #{$maxb}px){
+      font-size: #{$maxf}px;
+    }
+}
+@mixin fluid-line($minf,$maxf, $minb, $maxb){
+  $maxlessone: $maxb - 1;
+  $avg: ($maxf + $minf) / 2;
+  line-height: #{$minf}px;
+  @media (min-width: #{$minb}px) and (max-width: #{$maxlessone}px){
+    line-height: #{$avg}px;
+    line-height: calc(#{$minf}px + (#{$maxf} - #{$minf}) * (100vw - #{$minb}px) / (#{$maxb} - #{$minb}));
+  }
+
+  @media (min-width: #{$maxb}px){
+    line-height: #{$maxf}px;
+  }
+}
+
+@mixin text {
+  font-size: 12px;
+  line-height: 18px
+}
