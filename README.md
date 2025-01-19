@@ -1,9 +1,3 @@
-<p align="center">
-    <a href="https://www.lr-technologies.net/" target="_blank">
-        <img src="https://www.lr-technologies.net/img/log_b.png" width="400" alt="LR technologies">
-    </a>
-</p>
-
 ###
 Mysql V8.0
 db user with create db privileges / multi-tenant
